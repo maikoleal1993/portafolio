@@ -1,0 +1,66 @@
+
+
+
+<!-- Galería / Portafolio -->
+    <section id="galeria" class="portfolio">
+      <h2>Mi Portafolio</h2>
+      <p>Una muestra de los diseños que he creado para distintos proyectos.</p>
+      
+      <!-- Contenedor Grid -->
+      <div class="grid">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+          <img src="images/davo1.jpg" alt="Miniatura 1" loading="lazy">
+          <div class="card-info">
+            
+            <span class="tag">Entretenimiento</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card">
+          <img src="images/cr7.jpg" alt="Miniatura 2" loading="lazy">
+          <div class="card-info">
+            
+            <span class="tag">Deporte</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+          <img src="images/westcol.jpg" alt="Miniatura 3" loading="lazy">
+          <div class="card-info">
+         
+            <span class="tag">Entretenimiento</span>
+          </div>
+        </div>
+      </div>
+
+ <!-- Tarjeta 4 -->
+        <div class="card">
+          <img src="images/davo1.jpg" alt="Miniatura 1" loading="lazy">
+          <div class="card-info">
+            
+            <span class="tag">Entretenimiento</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="card">
+          <img src="images/cr7.jpg" alt="Miniatura 2" loading="lazy">
+          <div class="card-info">
+            
+            <span class="tag">Deporte</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="card">
+          <img src="images/westcol.jpg" alt="Miniatura 3" loading="lazy">
+          <div class="card-info">
+         
+            <span class="tag">Entretenimiento</span>
+          </div>
+        </div>
+      </div>
+    </section>

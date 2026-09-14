@@ -1,0 +1,799 @@
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Inter, Roboto, sans-serif;
+}
+
+body {
+  background-color: #0e0e10; /* Fondo estilo Twitch/Kick */
+  color: #efeff1;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: #18181b;
+  border-bottom: 1px solid #26262c;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #53fc18; /* Verde Kick */
+}
+
+.nav a {
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #9146ff; /* Violeta Twitch */
+}
+
+.lang-switch a.active {
+  color: #53fc18;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #53fc18; /* Verde Kick */
+  text-shadow: 0 0 15px rgba(83, 252, 24, 0.3);
+}
+
+.hero p {
+  color: #adadb8;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #53fc18; /* Verde Kick */
+  color: #000000; /* Texto negro para alto contraste estilo Kick */
+  border-radius: 6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #44d610;
+  box-shadow: 0 0 20px rgba(83, 252, 24, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Sección Portafolio (Grid) */
+.portfolio {
+  padding: 60px 5%;
+  background-color: #121215;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.portfolio p {
+  color: #adadb8;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #18181b;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #26262c;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #9146ff; /* Violeta Twitch */
+  box-shadow: 0 5px 20px rgba(145, 70, 255, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-info {
+  padding: 18px;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #53fc18; /* Verde Kick */
+  background: rgba(145, 70, 255, 0.15); /* Fondo Violeta suave */
+  border: 1px solid rgba(145, 70, 255, 0.4);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Banner CTA */
+.cta-banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #18181b 0%, #1f1f23 100%);
+  border: 1px solid #9146ff;
+  margin: 50px 5%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(145, 70, 255, 0.15);
+}
+
+.cta-banner h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.cta-banner p {
+  color: #adadb8;
+  margin-bottom: 25px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #9146ff; /* Violeta Twitch */
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #772ce8;
+  box-shadow: 0 0 15px rgba(145, 70, 255, 0.5);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  border-top: 1px solid #26262c;
+  color: #adadb8;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #53fc18;
+  font-weight: 700;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Adaptabilidad Móvil */
+@media (max-width: 768px) {
+  .header, .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+/* Desplazamiento suave al hacer clic en el menú */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sección de Precios */
+.pricing-section {
+  padding: 80px 5%;
+  text-align: center;
+  background-color: #0e0e10;
+}
+
+.pricing-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.pricing-section h2 span {
+  color: #53fc18;
+}
+
+.pricing-section p {
+  color: #adadb8;
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.price-card {
+  background: #18181b;
+  border: 1px solid #26262c;
+  border-radius: 12px;
+  padding: 35px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card.popular {
+  border-color: #53fc18;
+  box-shadow: 0 0 20px rgba(83, 252, 24, 0.15);
+}
+
+.price-card .badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #53fc18;
+  color: #000;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.price-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.price-card .price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.price-card .price span {
+  font-size: 0.9rem;
+  color: #adadb8;
+  font-weight: normal;
+}
+
+.price-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.price-card li {
+  color: #efeff1;
+  padding: 8px 0;
+  border-bottom: 1px solid #26262c;
+  font-size: 0.95rem;
+}
+
+.btn-price {
+  display: block;
+  padding: 12px;
+  background: #26262c;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-price:hover {
+  background: #9146ff;
+}
+
+/* Sección Acerca de Mí */
+.about-section {
+  padding: 80px 5%;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-section h2 span {
+  color: #9146ff;
+}
+
+.about-section p {
+  color: #adadb8;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+/* Botón Flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #53fc18; /* Verde Kick */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(83, 252, 24, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(83, 252, 24, 0.6);
+}
+
+/* Botones de Filtro */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: #18181b;
+  color: #adadb8;
+  border: 1px solid #26262c;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #9146ff; /* Violeta Twitch */
+  color: #ffffff;
+  border-color: #9146ff;
+}
+
+/* Adaptación del Grid para formatos mixtos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* Tarjeta Vertical para Reels (Aspect Ratio 9:16) */
+.card-reel .media-wrapper {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-reel img, .card-reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Indicador de Play y Visualizaciones */
+.play-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.play-icon {
+  color: #53fc18; /* Verde Kick */
+  font-size: 0.75rem;
+}
+
+/* Grid dinámico para videos de Reels (9:16) */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.reel-card {
+  background: #18181b;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.reel-card:hover {
+  transform: translateY(-5px);
+  border-color: #53fc18; /* Verde Neón */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Formato vertical estándar */
+  background-color: #000;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+/* Badge decorativo con las visitas */
+.video-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  pointer-events: none;
+}
+
+.play-badge {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sección Video Destacado Horizontal (16:9) */
+.featured-video-section {
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.video-headline {
+  margin-bottom: 20px;
+}
+
+.badge-featured {
+  background: rgba(83, 252, 24, 0.15);
+  color: #53fc18;
+  border: 1px solid #53fc18;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.video-headline h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.video-headline h2 span {
+  color: #53fc18;
+}
+
+/* Contenedor del Video con relación de aspecto 16:9 y bordes neón */
+.featured-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Garantiza el formato 1920x1080 */
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(83, 252, 24, 0.2);
+  border: 1px solid rgba(83, 252, 24, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-video-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(83, 252, 24, 0.35);
+}
+
+.featured-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Subsección Overlays */
+.overlays-container {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.subsection-title span {
+  color: #53fc18;
+  font-size: 1rem;
+}
+
+/* Grid horizontal para overlays de 1920x1080 */
+.grid-overlays {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card-overlay {
+  background: #18181b;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  aspect-ratio: 16 / 9; /* Garantiza el formato exacto 1920x1080 */
+  position: relative;
+}
+
+.card-overlay:hover {
+  transform: translateY(-5px);
+  border-color: #53fc18;
+}
+
+.card-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botón Play Overlay para Reels */
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.play-btn-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #53fc18; /* Verde Neón */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(83, 252, 24, 0.6);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding-left: 4px; /* Centra visualmente el icono de triángulo */
+}
+
+.play-overlay:hover .play-btn-circle {
+  transform: scale(1.15);
+  background-color: #ffffff;
+}
+
+/* Ocultar el botón de play cuando el video se está reproduciendo */
+.video-container.playing .play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Layout para la Galería de Reels */
+.reels-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Grid adaptativo: acomoda 3-4 columnas según la pantalla */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Tarjeta individual de Reel */
+.reel-card {
+  background: #18181b;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Proporción vertical 9:16 fija */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background-color: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botón Overlay de Play */
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 2;
+}
+
+.play-btn-circle {
+  width: 58px;
+  height: 58px;
+  background-color: #53fc18;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(83, 252, 24, 0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding-left: 4px;
+}
+
+.play-overlay:hover .play-btn-circle {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+
+/* Ocultar botón al reproducir */
+.video-container.playing .play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Badge de visitas/vistas */
+.video-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.play-badge {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.card-info {
+  padding: 14px;
+}
+
+/* Tarjeta CTA / Promocional lateral o final */
+.card-cta {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  border: 1px solid #53fc18;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  aspect-ratio: 9 / 16;
+}
+
+.card-cta h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.card-cta p {
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.btn-cta-purple {
+  background: #a855f7;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.btn-cta-purple:hover {
+  background: #9333ea;
+}
